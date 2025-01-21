@@ -1,0 +1,93 @@
+/* About Section */
+#about {
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: center; /* Vertically center the content */
+    height: 100vh; /* Take full viewport height */
+    background-color: black; /* Set black background for the section */
+    position: relative; /* Position for animation */
+    overflow: hidden; /* Hide overflowing content */
+    padding: 0;
+
+  }
+  
+  /* Image Styling */
+  #about img {
+    position: absolute; /* Absolute position to fit the screen */
+    top: 5;
+    left: 0;
+    width: 50vw; /* 50% of the viewport width */
+    height: 90vh; /* Make image cover full screen height */
+    object-fit: cover; /* Make sure image covers the entire space */
+    animation: slideIn 4.5s ease-out forwards; /* Image animation */
+    border-radius: 20px;/* Rounded corners for the image */
+    
+  } 
+  
+  /* Keyframe animation for the image */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%); /* Start from off-screen */
+    }
+    100% {
+      transform: translateX(0); /* Slide to its position */
+    }
+  }
+  
+  /* Text Styling */
+  #about .text-content {
+    margin-left: 50vw; /* Push text to the right of the screen */
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 600px;
+    z-index: 1; /* Ensure text appears above image */
+    animation: fadeInText 4.5s ease-out forwards; /* Text animation */
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Keyframe animation for the text */
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); /* Start from the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Move to its normal position */
+    }
+  }
+  
+  #about h2 {
+    font-size: 3rem; /* Larger heading size */
+    margin-bottom: 20px;
+    color: #ff7e5f; /* Gradient-like color for the heading */
+  }
+  
+  /* Text Gradient Effect */
+  #about .text-content p {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient color for text */
+    -webkit-background-clip: text;
+    color: transparent; /* Clip the gradient to the text */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column; /* Stack image and text vertically on small screens */
+    }
+  
+    #about img {
+      width: 100vw; /* Make the image full width on small screens */
+      height: 50vh; /* Adjust the height for smaller screen */
+    }
+  
+    #about .text-content {
+      margin-left: 0; /* Remove the left margin when stacked */
+      text-align: center; /* Center the text on mobile */
+    }
+  }
+  

@@ -1,0 +1,48 @@
+/* Skills Section Styling */
+#skills {
+    padding: 60px 20px;
+    background-color: black;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    font-size: 2.5rem;
+    color: #ff7e5f;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ff7e5f;
+  }
+  
+  .skill h3 {
+    font-size: 1.5rem;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+  

@@ -1,0 +1,126 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black; /* Set initial background to black */
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  scroll-behavior: smooth; /* Smooth scroll between sections */
+}
+
+html {
+  height: 100%;
+}
+
+/* Welcome Message */
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  visibility: visible;
+  background: linear-gradient(45deg, #ff007f, #00b3b3); /* Mixed colors */
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: zoomInMessage 3s ease-in-out forwards;
+}
+
+/* Keyframe animation for zoom and fade effect */
+@keyframes zoomInMessage {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Main content that is hidden initially */
+.main-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in transition */
+  visibility: hidden; /* Initially hidden */
+}
+
+.main-content.show {
+  opacity: 1; /* Make content visible when the 'show' class is added */
+  visibility: visible; /* Ensure content is visible */
+}
+
+/* Fullscreen sections */
+section {
+  height: 100vh; /* Make each section take full screen height */
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background-color: #222; /* Slightly darker background for alternating sections */
+}
+
+/* Styling for the projects section */
+#projects {
+  padding: 50px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional section-specific styling (if needed) */
+#about,
+#skills,
+#contact {
+  background-color: #111;
+  color: white;
+}
+
+/* Example of customizing header if needed */
+header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* More styles as needed */

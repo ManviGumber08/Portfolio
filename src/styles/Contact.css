@@ -1,0 +1,108 @@
+/* Contact Section Styling */
+#contact {
+    padding: 60px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    color: #feb47b; /* Changed to #feb47b */
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 126, 95, 0.2);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    color: #feb47b; /* Changed to #feb47b */
+    margin-bottom: 5px;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .submit-btn {
+    background-color: #feb47b; /* Changed to #feb47b */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ff7e5f; /* Kept the hover effect for a different color */
+  }
+  
+  .contact-info {
+    color: #ddd;
+    font-size: 1.2rem;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  /* Link color change for mail and phone number */
+  .contact-info a {
+    color: #feb47b; /* Set link color to #feb47b */
+    text-decoration: none; /* Optional: Remove underline from links */
+  }
+  
+  .contact-info a:hover {
+    color: #ff7e5f; /* Change color on hover */
+  }
+  
+  /* Responsive Styling for smaller screens */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+    }
+  
+    .contact-form {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
